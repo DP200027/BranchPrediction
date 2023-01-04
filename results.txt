@@ -1,0 +1,61 @@
+Using LocalBP
+[system.cpu.branchPred]
+type=LocalBP
+BTBEntries=4096
+BTBTagSize=16
+RASSize=16
+eventq_index=0
+instShiftAmt=2
+localCtrBits=2
+localPredictorSize=2048
+numThreads=1
+
+Using benchmark 429.mcf
+system.cpu.branchPred.BTBMissPct             8.343459                       # BTB Miss Percentage
+
+Using benchmark 401.bzip2
+system.cpu.branchPred.BTBMissPct             0.017808                       # BTB Miss Percentage
+
+Using TournamentBP
+[system.cpu.branchPred]
+type=TournamentBP
+BTBEntries=2048
+BTBTagSize=16
+RASSize=16
+choiceCtrBits=2
+choicePredictorSize=4096
+eventq_index=0
+globalCtrBits=2
+globalPredictorSize=4096
+instShiftAmt=2
+localCtrBits=2
+localHistoryTableSize=2048
+localPredictorSize=1024
+numThreads=1
+
+Using benchmark 429.mcf
+system.cpu.branchPred.BTBMissPct             8.235485                       # BTB Miss Percentage
+
+Using benchmark 401.bzip2
+system.cpu.branchPred.BTBMissPct             0.224665                       # BTB Miss Percentage
+
+Using BiModeBP
+[system.cpu.branchPred]
+type=BiModeBP
+BTBEntries=4096
+BTBTagSize=16
+RASSize=16
+choiceCtrBits=2
+choicePredictorSize=8192
+eventq_index=0
+globalCtrBits=2
+globalPredictorSize=8192
+instShiftAmt=2
+numThreads=1
+
+
+Using benchmark 429.mcf
+system.cpu.branchPred.BTBMissPct             1.826994                       # BTB Miss Percentage
+
+Using benchmark 401.bzip2
+system.cpu.branchPred.BTBMissPct             0.001213                       # BTB Miss Percentage
